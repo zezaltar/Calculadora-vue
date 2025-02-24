@@ -30,7 +30,7 @@
 
     <template>
     <div class="calculadora">
-        <h1>Calculadora Reactiva</h1>
+        <h1>Calculadora Aritmética</h1>
         
         <div class="inputs">
         <input
