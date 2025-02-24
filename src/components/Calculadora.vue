@@ -13,14 +13,23 @@
     const a = Number(estado.num1);
     const b = Number(estado.num2);
     
+    // Escolhendo o operador
     switch(estado.operation) {
+        //Caso o operador seja '+'
         case '+':
+        //Soma os dois números
         return a + b;
+        //Caso o operador seja '-'
         case '-':
+        //Subtrai os dois números
         return a - b;
+        //Caso o operador seja '*'
         case '*':
+        //Multiplica os dois números
         return a * b;
+        //Caso o operador seja '/'
         case '/':
+        //Divide os dois números e verifica se b é zero
         return b !== 0 ? a / b : 'Erro: Divisão por zero';
         default:
         return 0;
@@ -31,30 +40,23 @@
     <template>
     <div class="calculadora">
         <h1>Calculadora Aritmética</h1>
-        
         <div class="inputs">
-        <input
-            type="number"
-            v-model="estado.num1"
-            placeholder="Primeiro número"
-        >
-        
+            <!-- Inputs de entrada : Digitando o primeiro número -->
+            <input type="number" v-model="estado.num1" placeholder="Primeiro número">
+        <!-- Selecionando o operador -->
         <select v-model="estado.operation">
             <option value="+">+</option>
             <option value="-">-</option>
             <option value="*">×</option>
             <option value="/">÷</option>
         </select>
-
-        <input
-            type="number"
-            v-model="estado.num2"
-            placeholder="Segundo número"
-        >
+        <!-- Inputs de entrada : Digitando o segundo número -->
+        <input type="number" v-model="estado.num2" placeholder="Segundo número">
         </div>
 
-        <div class="result">
-        <h2>Resultado: {{ calcularResultado() }}</h2>
+        <div class="resultado">
+        <h3>Resultado </h3>
+        <h3>{{ calcularResultado() }}</h3>
         </div>
     </div>
     </template>
@@ -63,9 +65,10 @@
     .calculadora {
     max-width: 600px;
     margin: 2rem auto;
-    padding: 20px;
+    padding: 2rem 1rem;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 8px;
+    font-size: 1.7rem;
     }
 
     .inputs {
@@ -88,7 +91,7 @@
     outline: none;
     }
 
-    .result {
+    .resultado {
     font-size: 1.5rem;
     color: #2c3e50;
     min-height: 2rem;
