@@ -2,7 +2,7 @@
     import { reactive } from 'vue';
 
     // Estado reativo único
-    const state = reactive({
+    const estado = reactive({
     num1: 0,
     num2: 0,
     operation: '+'
@@ -10,10 +10,10 @@
 
     // Função de cálculo pura
     const calcularResultado = () => {
-    const a = Number(state.num1);
-    const b = Number(state.num2);
+    const a = Number(estado.num1);
+    const b = Number(estado.num2);
     
-    switch(state.operation) {
+    switch(estado.operation) {
         case '+':
         return a + b;
         case '-':
@@ -35,11 +35,11 @@
         <div class="inputs">
         <input
             type="number"
-            v-model="state.num1"
+            v-model="estado.num1"
             placeholder="Primeiro número"
         >
         
-        <select v-model="state.operation">
+        <select v-model="estado.operation">
             <option value="+">+</option>
             <option value="-">-</option>
             <option value="*">×</option>
@@ -48,7 +48,7 @@
 
         <input
             type="number"
-            v-model="state.num2"
+            v-model="estado.num2"
             placeholder="Segundo número"
         >
         </div>
