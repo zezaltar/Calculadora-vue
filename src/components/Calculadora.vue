@@ -43,15 +43,15 @@
         <div class="inputs">
             <!-- Inputs de entrada : Digitando o primeiro número -->
             <input type="number" v-model="estado.num1" placeholder="Primeiro número">
-        <!-- Selecionando o operador -->
-        <select v-model="estado.operation">
+            <!-- Selecionando o operador -->
+            <select v-model="estado.operation">
             <option value="+">+</option>
             <option value="-">-</option>
             <option value="*">×</option>
             <option value="/">÷</option>
-        </select>
-        <!-- Inputs de entrada : Digitando o segundo número -->
-        <input type="number" v-model="estado.num2" placeholder="Segundo número">
+            </select>
+            <!-- Inputs de entrada : Digitando o segundo número -->
+            <input type="number" v-model="estado.num2" placeholder="Segundo número">
         </div>
 
         <div class="resultado">
@@ -62,6 +62,7 @@
     </template>
 
     <style scoped>
+    
     .calculadora {
     max-width: 600px;
     margin: 2rem auto;
